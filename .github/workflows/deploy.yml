@@ -30,6 +30,7 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
+          pip install jupyterlab-open-url-parameter
           cp README.md content
           jupyter lite build --contents content --output-dir dist
 
